@@ -17,7 +17,7 @@ std::vector<float> find_radial_forces(float la, float lb)
     
   vector<float> radial_forces;
   radial_forces.push_back((Pr * (lp-lb) - Fr * lb)/(la-lb));
-  radial_forces.push_back(-1*radial_forces.at(0)+ Pr - Fr);
+  radial_forces.push_back(-1*radial_forces.at(0) + Pr - Fr);
 
   return radial_forces;
 }
