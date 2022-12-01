@@ -26,7 +26,7 @@ std::vector<float> find_radial_forces(float la, float lb)
 int main()
 {
   //CURRENT PARAMS ***********************************
-  float la = 0.085;
+  float la = 0.093;
   float lb = 0.225;
 
   float C0RA = 15200;
@@ -60,7 +60,7 @@ int main()
   }
 
   float min_C0A = fs*abs(P0A);
-  printf("C0A must be greater than = %f\n", min_C0A);
+  printf("min. C0A = %f\n", min_C0A);
   
   float dynamic_load_ratio_a = (f0A*FaA)/C0RA;
   printf("dynamic load ratio = %f\n", dynamic_load_ratio_a);
@@ -101,7 +101,7 @@ int main()
   printf("dynamic equivalent load A = %f\n", dynamic_eq_load_A);
 
   float min_CA = dynamic_eq_load_A*pow(design_life, 0.3);
-  printf("min. dynamic load rating A = %f\n", min_CA);
+  printf("min. CA = %f\n", min_CA);
 
   //BEARING B ****************************************
   float rad_axial_ratio_B = FaB/abs(radial_forces[1]);
@@ -118,7 +118,7 @@ int main()
   }
 
   float min_C0B = fs*abs(P0B);
-  printf("C0B must be greater than = %f\n", min_C0B);
+  printf("min. C0B = %f\n", min_C0B);
   
   float dynamic_load_ratio_B = (f0B*FaB)/C0RB;
   printf("dynamic load ratio = %f\n", dynamic_load_ratio_B);
@@ -155,6 +155,6 @@ int main()
   printf("dynamic equivalent load B = %f\n", dynamic_eq_load_B);
 
   float min_CB = dynamic_eq_load_B*pow(design_life, 0.3);
-  printf("min. dynamic load rating B = %f\n", min_CB);
+  printf("min. CB = %f\n", min_CB);
   
 }
